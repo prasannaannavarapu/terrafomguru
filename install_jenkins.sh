@@ -26,9 +26,12 @@ sudo yum install unzip -y
 sudo unzip awscliv2.zip  
 sudo ./aws/install
 #ZAP is installed and can be run as zap.sh
-sudo wget https://github.com/zaproxy/zaproxy/releases/download/v2.14.0/ZAP_2_14_0_unix.sh
-sudo chmod +x ZAP_2_14_0_unix.sh 
-sudo ./ZAP_2_14_0_unix.sh -q
+#sudo wget https://github.com/zaproxy/zaproxy/releases/download/v2.14.0/ZAP_2_14_0_unix.sh
+sudo wget https://github.com/zaproxy/zaproxy/releases/download/v2.16.0/ZAP_2_16_0_unix.sh
+#sudo chmod +x ZAP_2_14_0_unix.sh
+sudo chmod +x ZAP_2_16_0_unix.sh 
+#sudo ./ZAP_2_14_0_unix.sh -q
+sudo ./ZAP_2_16_0_unix.sh -q
 curl -o kubectl https://s3.us-west-2.amazonaws.com/amazon-eks/1.23.7/2022-06-29/bin/linux/amd64/kubectl
 chmod +x ./kubectl
 mkdir -p $HOME/bin && cp ./kubectl $HOME/bin/kubectl && export PATH=$PATH:$HOME/bin
